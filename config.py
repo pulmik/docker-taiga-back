@@ -1,6 +1,6 @@
 from .common import *
 
-PUBLIC_REGISTER_ENABLED = False
+PUBLIC_REGISTER_ENABLED = True
 DEBUG = False
 TEMPLATE_DEBUG = False
 
