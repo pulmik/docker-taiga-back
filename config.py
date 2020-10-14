@@ -38,3 +38,11 @@ EVENTS_PUSH_BACKEND = "taiga.events.backends.rabbitmq.EventsPushBackend"
 EVENTS_PUSH_BACKEND_OPTIONS = {"url": "amqp://$RABBIT_USER:$RABBIT_PASSWORD@$RABBIT_HOST:$RABBIT_PORT/$RABBIT_VHOST"}
 
 CELERY_ENABLED = True
+
+# GitLab
+INSTALLED_APPS += ["taiga_contrib_gitlab_auth"]
+
+# Get these from Admin -> Applications
+GITLAB_API_CLIENT_ID = "$GITLAB_API_CLIENT_ID"
+GITLAB_API_CLIENT_SECRET = "$GITLAB_API_CLIENT_SECRET"
+GITLAB_URL = "$GITLAB_URL"

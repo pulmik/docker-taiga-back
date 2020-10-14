@@ -27,6 +27,7 @@ RUN apk --no-cache add python3 gettext postgresql-dev libxslt-dev libxml2-dev li
     && mkdir logs \
     && git clone --depth=1 -b stable https://github.com/taigaio/taiga-back.git back && cd back \
     && pip3 install --no-cache-dir -r requirements.txt \
+    && pip3 install taiga-contrib-gitlab-auth-official \
     && rm -rf /root/.cache \
     && apk del .build-dependencies \
     && rm /srv/taiga/back/settings/local.py.example \
